@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu for {{ restaurant.name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold text-center mb-8">Menu for {{ restaurant.name }}</h1>
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-4">{{ menu.name }}</h2>
+            <p class="text-gray-600 mb-2"><strong>Date:</strong> {{ menu.date }}</p>
+            <p class="text-gray-600 mb-2"><strong>Rating:</strong> {{ menu.rating }}</p>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-4">Western Cuisine</h3>
+            <ul class="list-disc list-inside">
+                {% for key, value in menu.western_cuisine.items %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-4">Arab Cuisine</h3>
+            <ul class="list-disc list-inside">
+                {% for key, value in menu.arab_cuisine.items %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold mb-4">Vegetarian Cuisine</h3>
+            <ul class="list-disc list-inside">
+                {% for key, value in menu.vegetarian_cuisine.items %}
+                    <li>{{ key }}: {{ value }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="text-center">
+            <a href="{% url 'restaurant:restaurant' %}" class="bg-blue-500 text-white px-4 py-2 rounded">Back to Restaurants</a>
+        </div>
+    </div>
+</body>
+</html>
