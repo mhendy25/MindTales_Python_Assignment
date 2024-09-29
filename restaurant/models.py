@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 # Create your models here.
@@ -21,8 +22,9 @@ class Menu(models.Model):
     arab_cuisine = models.JSONField(default=dict)
     vegetarian_cuisine = models.JSONField(default=dict)
     date = models.DateField()
-    rating = models.FloatField(default=0)
+    voting = models.IntegerField(default=0)
     class Meta:
         ordering = ('date', )
     def __str__(self):
         return self.name 
+

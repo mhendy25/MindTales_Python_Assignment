@@ -11,7 +11,7 @@ class RestaurantForm(forms.ModelForm):
 class MenuForm(forms.ModelForm):
     class Meta:
         model = Menu
-        fields = ['name', 'western_cuisine', 'arab_cuisine', 'vegetarian_cuisine', 'date', 'rating']
+        fields = ['name', 'western_cuisine', 'arab_cuisine', 'vegetarian_cuisine', 'date', 'voting']
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(max_length=254, required=True, help_text='Required. Enter a valid email address.')
@@ -22,11 +22,9 @@ class SignUpForm(UserCreationForm):
 
 class LoginForm(AuthenticationForm):
     username = forms.CharField(max_length=254, required=True, help_text='Required. Enter your username.', widget=forms.TextInput(attrs={
-        'class': 'w-full py-4 px-6 rounded-xl',
         'placeholder': 'Please enter your username',
 
     }))
     password = forms.CharField(required=True, help_text='Required. Enter your password.', widget=forms.TextInput(attrs={
-        'placeholder': 'Your username',
         'class': 'w-full py-4 px-6 rounded-xl'
     }))

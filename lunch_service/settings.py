@@ -48,6 +48,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "lunch_service.middleware.VersionRoutingMiddleware",
 ]
 
 ROOT_URLCONF = "lunch_service.urls"
