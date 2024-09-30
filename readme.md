@@ -2,7 +2,7 @@
 
 ## Demo
 
-Check the demo [here].
+Check the demo [here](https://drive.google.com/file/d/1CFDseob3imTJZVfnLJpcYdUkzX5Ik6xw/view?usp=sharing).
 
 Lunch Service is a Django-based web application that allows users to manage restaurants and their menus. Users can sign up, log in, add restaurants, and vote for their favorite menus.
 
@@ -21,31 +21,37 @@ Lunch Service is a Django-based web application that allows users to manage rest
    git clone https://github.com/mhendy25/MindTales_Python_Assignment.git
    ```
 
-2. Build and start the Docker containers:
+2. Go to the project's directory:
+
+   ```sh
+   cd MindTales_Python_Assignment
+   ```
+
+3. Build and start the Docker containers:
 
    ```sh
    docker-compose up --build
    ```
 
-3. Apply the migrations:
+4. Apply the migrations:
 
    ```sh
    docker-compose exec web python manage.py migrate
    ```
 
-4. Create a superuser:
+5. Create a superuser:
 
    ```sh
    docker-compose exec web python manage.py createsuperuser
    ```
 
-5. Create a superuser:
+6. Create a superuser:
 
    ```sh
    python manage.py createsuperuser
    ```
 
-6. Signup, login, & continue using the app:
+7. Signup, login, & continue using the app:
    ```sh
    http://127.0.0.1:8000/singup/
    ```
