@@ -25,6 +25,6 @@ class LoginForm(AuthenticationForm):
         'placeholder': 'Please enter your username',
 
     }))
-    password = forms.CharField(required=True, help_text='Required. Enter your password.', widget=forms.TextInput(attrs={
+    password = forms.CharField(required=True, help_text='Required. Enter your password.', widget=forms.PasswordInput(attrs={
         'class': 'w-full py-4 px-6 rounded-xl'
     }))

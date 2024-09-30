@@ -7,13 +7,13 @@ class VersionRoutingMiddleware:
 
     def __call__(self, request):
         build_version = request.headers.get('build-version')
-        # print(f"Build version: {build_version}")
+        print(f"Build version: {build_version}")
         if build_version:
-            if build_version.startswith('1.'):
+            if '1.' in build_version:
                 request.path_info = self.route_v1(request.path_info)
             else:
                 request.path_info = self.route_v2(request.path_info)
-        # print(f"Modified path: {request.path_info}")
+        print(f"Modified path: {request.path_info}")
         response = self.get_response(request)
         return response
 

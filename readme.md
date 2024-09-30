@@ -1,5 +1,9 @@
 # Lunch Service
 
+## Demo
+
+Check the demo [here].
+
 Lunch Service is a Django-based web application that allows users to manage restaurants and their menus. Users can sign up, log in, add restaurants, and vote for their favorite menus.
 
 ## Table of Contents
@@ -15,7 +19,6 @@ Lunch Service is a Django-based web application that allows users to manage rest
 
    ```sh
    git clone https://github.com/mhendy25/MindTales_Python_Assignment.git
-   cd lunch_service
    ```
 
 2. Build and start the Docker containers:
@@ -44,7 +47,7 @@ Lunch Service is a Django-based web application that allows users to manage rest
 
 6. Signup, login, & continue using the app:
    ```sh
-   http://0.0.0.0:8000/signup/
+   http://127.0.0.1:8000/singup/
    ```
 
 ## Usage
@@ -52,7 +55,19 @@ Lunch Service is a Django-based web application that allows users to manage rest
 1. Open your web browser and navigate to [`http://127.0.0.1:8000/`](http://127.0.0.1:8000/).
 2. Sign up for a new account or log in if you already have one.
 3. Add new restaurants and menus.
-4. Vote for your favorite menus.
+4. To get the menu for users who didn't update the app to the latest version:
+
+```sh
+curl -X GET http://127.0.0.1:8000/1/menu/ -H "build-version:1.0"
+```
+
+5. To get the menu for users of the app's latest version:
+
+```sh
+curl -X GET http://127.0.0.1:8000/1/menu/ -H "build-version:2.0"
+```
+
+6. Vote for your favorite menus.
 
 ## Project Structure
 
