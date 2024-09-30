@@ -1,10 +1,10 @@
 # Lunch Service
 
+Lunch Service is a Django-based web application that allows users to manage restaurants and their menus. Users can sign up, log in, add restaurants, and vote for their favorite menus.
+
 ## Demo
 
-Check the demo [here](https://drive.google.com/file/d/1CFDseob3imTJZVfnLJpcYdUkzX5Ik6xw/view?usp=sharing).
-
-Lunch Service is a Django-based web application that allows users to manage restaurants and their menus. Users can sign up, log in, add restaurants, and vote for their favorite menus.
+Check the [demo here](https://drive.google.com/file/d/1CFDseob3imTJZVfnLJpcYdUkzX5Ik6xw/view?usp=sharing).
 
 ## Table of Contents
 
